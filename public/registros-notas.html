@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registros de Notas - Admin</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/registro-notas.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="shortcut icon" href="./images/favicon-16x16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <button class="logout-button" onclick="voltarAoPortal()">
+            <div class="icon-text-container">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar</span>
+            </div>
+        </button>
+        <h2>Registro de notas</h2>
+        <img src="./images/ibe-logo.png" alt="ibe-logo">
+    </header>
+    <div class="container">
+        
+        <h3>Adicionar Registro</h3>
+        <div class="input-group">
+            <input type="text" id="nome" placeholder="Nome do Aluno" list="nomes-alunos">
+            <datalist id="nomes-alunos">
+                <!-- Opções de nomes podem ser preenchidas dinamicamente -->
+            </datalist>
+        </div>
+        <div class="input-group">
+            <select id="disciplina">
+                <option value="">Selecione a Disciplina</option>
+                <option value="Administração Eclesiástica">Administração Eclesiástica</option>
+                <option value="Atos dos Apóstolos">Atos dos Apóstolos</option>
+                <option value="Discipulado">Discipulado</option>
+                <option value="Educação Cristã">Educação Cristã</option>
+                <option value="Epístolas Gerais">Epístolas Gerais</option>
+                <option value="Epístolas Paulinas">Epístolas Paulinas</option>
+                <option value="Escatologia Bíblica">Escatologia Bíblica</option>
+                <option value="Ética Cristã">Ética Cristã</option>
+                <option value="Evangelhos">Evangelhos</option>
+                <option value="Geografia Bíblica">Geografia Bíblica</option>
+                <option value="Hermenêutica Sagrada">Hermenêutica Sagrada</option>
+                <option value="História Eclesiástica">História Eclesiástica</option>
+                <option value="Homilética - O pregador">Homilética - O pregador</option>
+                <option value="Homilética - Sermão">Homilética - Sermão</option>
+                <option value="Introdução à Teologia">Introdução à Teologia</option>
+                <option value="Lar Cristão - Família">Lar Cristão - Família</option>
+                <option value="Liderança">Liderança</option>
+                <option value="Livros Históricos">Livros Históricos</option>
+                <option value="Livros Poéticos">Livros Poéticos</option>
+                <option value="Missiologia">Missiologia</option>
+                <option value="Origens Bíblicas">Origens Bíblicas</option>
+                <option value="Pentateuco">Pentateuco</option>
+                <option value="Períodos Bíblicos">Períodos Bíblicos</option>
+                <option value="Profetas Maiores">Profetas Maiores</option>
+                <option value="Profetas Menores">Profetas Menores</option>
+                <option value="Psicologia Pastoral">Psicologia Pastoral</option>
+                <option value="Seitas e Heresias">Seitas e Heresias</option>
+                <option value="Teologia Pastoral">Teologia Pastoral</option>
+                <option value="Teologia Sistemática 1">Teologia Sistemática 1</option>
+                <option value="Teologia Sistemática 2">Teologia Sistemática 2</option>
+                <option value="Teologia Sistemática 3">Teologia Sistemática 3</option>
+                <option value="Tipologia Bíblica">Tipologia Bíblica</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <select id="nota">
+                <option value="Sem nota">Sem Nota</option>
+                <option value="0">0</option>
+                <option value="0.5">0,5</option>
+                <option value="1">1</option>
+                <option value="1.5">1,5</option>
+                <option value="2">2</option>
+                <option value="2.5">2,5</option>
+                <option value="3">3</option>
+                <option value="3.5">3,5</option>
+                <option value="4">4</option>
+                <option value="4.5">4,5</option>
+                <option value="5">5</option>
+                <option value="5.5">5,5</option>
+                <option value="6">6</option>
+                <option value="6.5">6,5</option>
+                <option value="7">7</option>
+                <option value="7.5">7,5</option>
+                <option value="8">8</option>
+                <option value="8.5">8,5</option>
+                <option value="9">9</option>
+                <option value="9.5">9,5</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <button class="botao-adicionar" id="botao-adicionar" onclick="adicionarRegistro()">Adicionar</button>
+        <h3>Filtros</h3>
+        <div class="input-group">
+            <input type="text" id="filtroNome" placeholder="Filtrar por Nome" onkeyup="aplicarFiltro(1)">
+        </div>
+        <div class="input-group">
+            <select id="filtroDisciplina" onchange="aplicarFiltro(1)">
+                <option value="">Selecione a Disciplina</option>
+                <option value="Administração Eclesiástica">Administração Eclesiástica</option>
+                <option value="Atos dos Apóstolos">Atos dos Apóstolos</option>
+                <option value="Discipulado">Discipulado</option>
+                <option value="Educação Cristã">Educação Cristã</option>
+                <option value="Epístolas Gerais">Epístolas Gerais</option>
+                <option value="Epístolas Paulinas">Epístolas Paulinas</option>
+                <option value="Escatologia Bíblica">Escatologia Bíblica</option>
+                <option value="Ética Cristã">Ética Cristã</option>
+                <option value="Evangelhos">Evangelhos</option>
+                <option value="Geografia Bíblica">Geografia Bíblica</option>
+                <option value="Hermenêutica Sagrada">Hermenêutica Sagrada</option>
+                <option value="História Eclesiástica">História Eclesiástica</option>
+                <option value="Homilética - O pregador">Homilética - O pregador</option>
+                <option value="Homilética - Sermão">Homilética - Sermão</option>
+                <option value="Introdução à Teologia">Introdução à Teologia</option>
+                <option value="Lar Cristão - Família">Lar Cristão - Família</option>
+                <option value="Liderança">Liderança</option>
+                <option value="Livros Históricos">Livros Históricos</option>
+                <option value="Livros Poéticos">Livros Poéticos</option>
+                <option value="Missiologia">Missiologia</option>
+                <option value="Origens Bíblicas">Origens Bíblicas</option>
+                <option value="Pentateuco">Pentateuco</option>
+                <option value="Períodos Bíblicos">Períodos Bíblicos</option>
+                <option value="Profetas Maiores">Profetas Maiores</option>
+                <option value="Profetas Menores">Profetas Menores</option>
+                <option value="Psicologia Pastoral">Psicologia Pastoral</option>
+                <option value="Seitas e Heresias">Seitas e Heresias</option>
+                <option value="Teologia Pastoral">Teologia Pastoral</option>
+                <option value="Teologia Sistemática 1">Teologia Sistemática 1</option>
+                <option value="Teologia Sistemática 2">Teologia Sistemática 2</option>
+                <option value="Teologia Sistemática 3">Teologia Sistemática 3</option>
+                <option value="Tipologia Bíblica">Tipologia Bíblica</option>
+            </select>
+        </div>
+        <button class="botao-filtro" onclick="limparFiltro()">Limpar Filtros</button>
+        <h3>Registros</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Disciplina</th>
+                    <th>Nota</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="lista-registros">
+            </tbody>
+        </table>
+        <div id="paginacao"></div>
+    </div>
+    <script src="./js/registros-notas.js" defer></script>
+    <script src="https://kit.fontawesome.com/0e2e42d35c.js" crossorigin="anonymous"></script>
+</body>
+</html>

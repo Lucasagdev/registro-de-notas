@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal do Administrador</title>
+    <link rel="stylesheet" href="./css/portal-admin.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="shortcut icon" href="./images/favicon-16x16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <button class="logout-button" onclick="logout()">
+            <div class="icon-text-container">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar</span>
+            </div>
+        </button>
+        <h2>Portal do Professor</h2>
+        <img src="./images/ibe-logo.png" alt="ibe-logo">
+    </header>
+    <div class="container">
+        <h3>Escolha uma opção:</h3>
+        <div class="menu">
+            <div class="registros-notas">
+                <a href="registros-notas.html" class="btn"><i class="fa-solid fa-file-lines"></i></a>
+                <p>Notas</p>
+            </div>
+            <div class="detalhes-usuarios">
+                <a href="detalhes-usuarios.html" class="btn"><i class="fa-solid fa-users"></i></a>
+                <p>Usuarios</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/portal-admin.js" defer></script>
+    <script src="https://kit.fontawesome.com/0e2e42d35c.js" crossorigin="anonymous"></script>
+</body>
+</html>

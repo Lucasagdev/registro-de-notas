@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Usuário</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/usuario.css">
+    <link rel="shortcut icon" href="./images/favicon-16x16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h2>Bem-vindo, <span class="nome" id="nomeUsuario"></span>!</h2>
+        <button class="logout-button" onclick="logout()">
+            <div class="icon-text-container">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar</span>
+            </div>
+        </button>
+        
+        <h3>Seguem abaixo seus registros de notas</h3>
+        <div id="contador-notas"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th> <!-- Mantém o campo "Nome" -->
+                    <th>Disciplina</th>
+                    <th>Nota</th>
+                </tr>
+            </thead>
+            <tbody id="lista-registros">
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/usuario.js" defer></script>
+    <script src="https://kit.fontawesome.com/0e2e42d35c.js" crossorigin="anonymous"></script>
+</body>
+</html>

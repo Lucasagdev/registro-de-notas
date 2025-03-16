@@ -1,0 +1,90 @@
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px; /* Adiciona um pouco de espaço interno */
+    text-align: center; /* Centraliza o conteúdo dentro do container */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    margin: 10px 0; /* Adiciona um pouco de espaço entre os grupos */
+    gap: 10px; /* Adiciona espaço entre os elementos */
+   
+}
+
+.input-group input, .input-group select {
+    width: 300px; /* Define um tamanho fixo para os inputs e selects */
+    padding: 10px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    border: none;
+    border-radius: 7px;
+}
+
+.input-group select {
+    width: 300px; /* Define um tamanho fixo para os selects */
+    padding: 10px;
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+    border: none; /* Remove a borda */
+    appearance: none; /* Remove estilos padrão do navegador */
+    -webkit-appearance: none; /* Remove estilos padrão no Safari */
+    -moz-appearance: none; /* Remove estilos padrão no Firefox */
+    background-color: white; /* Define um fundo branco (ou qualquer outra cor) */
+    border-radius: 7px; /* Remove bordas arredondadas, se houver */
+    cursor: pointer;
+}
+
+/* Estilo opcional para adicionar uma seta personalizada ao select */
+.input-group select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 35px; /* Espaço para a seta */
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+    width: 25%;
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Mantém as bordas colapsadas para um visual limpo */
+    border-radius: 8px; /* Bordas arredondadas suaves */
+    overflow: hidden; /* Garante que o conteúdo interno respeite o border-radius */
+    background-color: white; /* Fundo branco para a tabela */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidade */
+}
+
+th, td {
+    padding: 12px 15px; /* Espaçamento interno confortável */
+    text-align: center; /* Alinhamento do texto à esquerda */
+    border-bottom: 1px solid #e0e0e0; /* Linha divisória sutil entre as linhas */
+}
+
+th {
+    background-color: #75ac7c; /* Fundo suave para o cabeçalho */
+    font-weight: 600; /* Texto do cabeçalho em negrito */
+    color: #333; /* Cor escura para o texto do cabeçalho */
+    text-align: center;
+}
+
+td {
+    background-color: white; /* Fundo branco para as células */
+    color: #555; /* Cor suave para o texto das células */
+}
+
+/* Efeito hover nas linhas da tabela */
+tr:hover td {
+    background-color: #f1f1f1; /* Fundo sutil ao passar o mouse */
+}
+
+/* Remover borda inferior da última linha */
+tr:last-child td {
+    border-bottom: none;
+}

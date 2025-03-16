@@ -1,0 +1,54 @@
+*{
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url(/images/background-admin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+.container span{
+    color: rgb(104, 104, 204);
+}
+
+.container, .icon-text-container span{
+    color: black;
+}
+
+.logout-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    margin-left: 30px;
+    transition: 0.5s;
+}
+
+.logout-button:hover{
+    transform: scale(0.9);
+    color: rgb(39, 95, 86);
+}
+
+.icon-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-text-container i {
+    font-size: 35px;
+}
+
+.icon-text-container span {
+    font-size: 17px;
+}

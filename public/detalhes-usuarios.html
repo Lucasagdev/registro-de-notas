@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes de Usuários - Admin</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/detalhes-usuarios.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="shortcut icon" href="./images/favicon-16x16.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <button class="logout-button" onclick="voltarAoPortal()">
+            <div class="icon-text-container">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Voltar</span>
+            </div>
+        </button>
+        <h2>Gerenciar Usuários Cadastrados</h2>
+        <img src="./images/ibe-logo.png" alt="ibe-logo">
+    </header>
+    <div class="container">
+        <h3>Usuários Cadastrados</h3>
+        <button class="botao-usuarios" onclick="mostrarUsuarios()">Mostrar Usuários</button>
+        <div id="lista-usuarios" class="mostrarUsuarios">
+            <ul id="usuarios-lista"></ul>
+        </div>
+
+        <h3>Cadastrar Novo Usuário</h3>
+<div id="cadastro-container">
+    <div class="input-group">
+        <input type="text" id="novo-usuario" placeholder="Novo Usuário">
+        <div id="erro-novo-usuario" class="error">Por favor, insira um usuário.</div>
+    </div>
+    <div class="input-group senha-group">
+        <input type="password" id="nova-senha" placeholder="Nova Senha">
+        <button class="senha" type="button" onclick="toggleSenha('nova-senha')">
+            <i class="fa-solid fa-eye-slash"></i>
+        </button>
+        <div id="erro-nova-senha" class="error">A senha deve ter pelo menos 6 caracteres, incluindo números e letras.</div>
+    </div>
+    <div class="input-group">
+        <label>
+            <input type="radio" name="tipo-usuario" id="tipo-usuario" value="usuario" checked> Usuário
+        </label>
+        <label>
+            <input type="radio" name="tipo-usuario" id="tipo-admin" value="admin"> Administrador
+        </label>
+    </div>
+    <button class="fazer-login" onclick="registrarUsuario()">Registrar</button>
+</div>
+    </div>
+    <script src="./js/detalhes-usuarios.js" defer></script>
+    <script src="https://kit.fontawesome.com/0e2e42d35c.js" crossorigin="anonymous"></script>
+</body>
+</html>

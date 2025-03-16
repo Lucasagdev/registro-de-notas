@@ -1,0 +1,46 @@
+*{
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url(/images/background-admin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+.container h3{
+    text-align: center;
+    font-size: 25px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.menu, .registro-notas, .detalhes-usuarios{
+    padding: 0px 60px 0px 60px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.menu i{
+    color: #1f4881;
+    font-size: 200px;
+    transition: 0.5s;
+}
+
+.menu i:hover{
+    color: #1d395e;
+    transform: scale(0.93);
+}
+
+.menu p{
+    font-size: 20px;
+}

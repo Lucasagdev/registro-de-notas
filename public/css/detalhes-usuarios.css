@@ -1,0 +1,210 @@
+* {
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url(/images/background-admin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+}
+
+.mostrarUsuario{
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+/* Estilo minimalista para a lista de usuários */
+/* Centraliza o contêiner da lista */
+#lista-usuarios {
+    display: none; /* Inicialmente oculto */
+    width: 100%;
+    max-width: 600px; /* Largura máxima da lista */
+    margin: 20px auto; /* Centraliza horizontalmente */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa o contêiner */
+}
+
+/* Estilo minimalista para a lista de usuários */
+#usuarios-lista {
+    list-style-type: none; /* Remove os marcadores de lista */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-height: 300px; /* Altura máxima antes de aparecer o scroll */
+    overflow-y: auto; /* Adiciona scroll vertical quando necessário */
+}
+
+/* Estilo para cada item da lista */
+/* Estilo para cada item da lista */
+#usuarios-lista li {
+    display: flex; /* Torna o item da lista um contêiner flexível */
+    align-items: center; /* Centraliza verticalmente o conteúdo */
+    justify-content: space-between; /* Espaço entre o texto e os botões */
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee; /* Linha divisória entre os itens */
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo para o contêiner dos botões */
+#usuarios-lista li .botoes-container {
+    display: flex; /* Torna os botões um contêiner flexível */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-left: auto; /* Empurra o contêiner dos botões para a direita */
+}
+
+/* Estilo para os botões de editar e excluir */
+#usuarios-lista li button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilo específico para o botão de editar (verde) */
+#usuarios-lista li button:first-child {
+    background-color: #4fac76; /* Cor de fundo verde para o botão de editar */
+}
+
+/* Estilo específico para o botão de excluir (vermelho) */
+#usuarios-lista li button:last-child {
+    background-color: #ff6b6b; /* Cor de fundo vermelha para o botão de excluir */
+}
+
+/* Efeito hover nos botões */
+#usuarios-lista li button:hover {
+    opacity: 0.9; /* Efeito de transparência ao passar o mouse */
+}
+
+#usuarios-lista li:hover {
+    background-color: #e6e6e6; /* Efeito de transparência ao passar o mouse */
+}
+
+.botao-usuarios{
+    background-color: #6895b3;
+    border: none;
+    border-radius: 7px;
+    width: 120px;
+    height: 40px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.botao-usuarios:hover {
+    background-color: #3e737c; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para o contêiner da lista */
+.mostrarUsuarios {
+    display: none; /* Inicialmente oculto */
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Centraliza os inputs de texto */
+#cadastro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza o contêiner */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.377); /* Fundo branco semi-transparente */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilização minimalista para os inputs de rádio */
+.input-group label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão */
+    width: 16px;
+    height: 16px;
+    border: 2px solid #4fac76; /* Cor da borda */
+    border-radius: 50%; /* Torna o input circular */
+    margin-right: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.input-group input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background-color: #4fac76; /* Cor de preenchimento quando selecionado */
+    border-radius: 50%;
+}
+
+.senha-group {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.senha-group input {
+    width: 100%;
+    padding-right: 40px; /* Espaço para o botão de senha */
+}
+
+.senha-group .senha {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para o botão de registro */
+.fazer-login {
+    background-color: #4fac76;
+    border: none;
+    border-radius: 7px;
+    width: 120px;
+    height: 40px;
+    color: white;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fazer-login:hover {
+    background-color: #3e8e5f; /* Cor mais escura ao passar o mouse */
+}

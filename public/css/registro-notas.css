@@ -1,0 +1,75 @@
+*{
+    font-family: 'Poppins';
+}
+
+body{
+    background-image: url(/images/background-admin.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+    margin: 20px;
+    text-align: center;
+}
+
+.botao-adicionar{
+    background-color: #99d391;
+    border: none;
+    border-radius: 7px;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-adicionar:hover{
+    background-color: #73b96a;
+    transform: scale(0.94);
+}
+
+.botao-filtro{
+    background-color: #70966a;
+    border: none;
+    border-radius: 7px;
+    height: 35px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-filtro:hover{
+    background-color: #446b3e;
+    transform: scale(0.94);
+}
+
+.botao-editar {
+    background-color: #4fac76;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.botao-editar:hover {
+    background-color: #45a049;
+}
+
+.botao-excluir {
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.3s ease;
+}
+
+.botao-excluir:hover {
+    background-color: #d32f2f;
+}
